@@ -8,6 +8,7 @@ const activity = [
   "Jestem twoim Bogiem, rozumiesz?",
   "GrochuPay to legitna forma płatności",
   "Jestem zajebisty",
+  "Grochu Raider",
 ]
 
 client.on('ready', () => {
@@ -20,7 +21,7 @@ client.on('ready', () => {
     client.user.setActivity(activity[index], { type: 'PLAYING'});
     i = i + 1;
     if(i === activity.length) i = i - activity.length;
-  }, 10000);
+  }, 5000);
   
 });
 
