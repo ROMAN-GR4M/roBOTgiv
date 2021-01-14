@@ -6,7 +6,7 @@ const { prefix, token } = require('./config.json');
 client.on('ready', () => {
   console.log(`Bot tag: ${client.user.tag}`);
   console.log(`Guilds: ${client.guilds.cache.size}`);
-  client.user.setActivity(`with ${prefix}giveaway & ${prefix}help`, { type: 'PLAYING' });
+  client.user.setActivity(`GrochuPay`, { type: 'WATCHING' });
 });
 
 client.commands = new Discord.Collection();
