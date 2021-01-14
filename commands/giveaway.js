@@ -9,8 +9,11 @@ module.exports = {
             var time = '';
             var time2 = '';
             var time3 = '';
+            const embedinfo = new Discord.MessageEmbed()
+                        .setTitle(`${prefix}giveaway [czas trwania] [link do zdjęcia] [nagroda]`)
+                        .setColor('ffffff')
             if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('You don\'t have enough permissions to use this command.');
-            if (message.content === `${prefix}giveaway`) return message.channel.send(`${prefix}giveaway [czas trwania] [link do zdjęcia] [nagroda]`)
+            if (message.content === `${prefix}giveaway`) return message.channel.send(embedinfo)
             if (message.content !== `${prefix}giveaway`) {
                 const stated_duration_hours = message.content.split(' ')[1];
                 const stated_duration_hours2 = stated_duration_hours.toLowerCase();
