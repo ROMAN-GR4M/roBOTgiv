@@ -60,7 +60,7 @@ module.exports = {
                     if (stated_duration_hours3 !== '0') {
                         const embed = new Discord.MessageEmbed()
                         .setTitle(`${prize}`)
-                        .setColor('36393F')
+                        .setColor('e74c3c')
                         .setDescription(`Kliknij w reakcje 👍 i wygraj ${prize}!\n `+"`Giveaway kończy się: `")
 						.setImage(photo)
                         .setFooter(`Utworzony przez ${message.author.username}`)
@@ -81,7 +81,7 @@ module.exports = {
                                 if (!msg.reactions.cache.get('👍').users.cache.size < 1) {
                                     const winner_embed = new Discord.MessageEmbed()
                                     .setTitle(`**Ogłoszenie wyników**`)
-                                    .setColor('36393F')
+                                    .setColor('c27c0e')
                                     .setDescription(`Giveaway o ***${prize}*** wygrał *${winner.tag}*\n**Gratulacje!**`)
                                     .setFooter(`Liczba uczestników - ${msg.reactions.cache.get('👍').count}`)
                                     message.channel.send(winner_embed);
