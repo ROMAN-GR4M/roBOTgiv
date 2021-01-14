@@ -1,6 +1,19 @@
 let Discord = require('discord.js');
 const { prefix } = require('../config.json');
 
+function timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    return time;
+  }
+
 module.exports = {
     name: 'giveaway',
     execute(client, message){
@@ -62,7 +75,7 @@ module.exports = {
                         .setTitle(`${prize}`)
                         .setColor('e74c3c')
                         .setDescription(`Kliknij w reakcje 👍 i wygraj ${prize}!\n `+"`Giveaway kończy się: `")
-                        .addField(Date.now() + (actual_duration_hours))
+                        .addField(timeConverter(Date.now() + (actual_duration_hours)))
 						.setImage(photo)
                         .setFooter(`Utworzony przez ${message.author.username}`)
                         let msg = await message.channel.send(embed)
