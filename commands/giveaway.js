@@ -66,10 +66,6 @@ module.exports = {
                         .setFooter(`Utworzony przez ${message.author.username}`)
                         let msg = await message.channel.send(embed)
                         await msg.react('👍')
-                        if (message.content.startsWith(`${prefix}giveaway`)) {
-                            message.delete(1000);
-                            message.channel.send(message.content.slice(5, message.content.length));
-                         }
                         setTimeout(() => {
                             msg.reactions.cache.get('👍').users.remove(client.user.id)
                             setTimeout(() => {
