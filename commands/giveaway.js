@@ -61,10 +61,9 @@ module.exports = {
                         const embed = new Discord.MessageEmbed()
                         .setTitle(`${prize}`)
                         .setColor('e74c3c')
-                        .setDescription(`Kliknij w reakcje 👍 i wygraj ${prize}!\n `+"`Giveaway kończy się: `")
-                        .setTimestamp(Date.now() + (actual_duration_hours))
+                        .setDescription(`Kliknij w reakcje 👍 i wygraj ${prize}!`)
 						.setImage(photo)
-                        .setFooter(`Utworzony przez ${message.author.username}` | Koniec: )
+                        .setFooter(`Utworzony przez ${message.author.username}`)
                         let msg = await message.channel.send(embed)
                         await msg.react('👍')
 
