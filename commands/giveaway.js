@@ -1,6 +1,8 @@
 let Discord = require('discord.js');
 const { prefix } = require('../config.json');
 
+let dww = Date.now() + (actual_duration_hours);
+
 module.exports = {
     name: 'giveaway',
     execute(client, message){
@@ -61,7 +63,7 @@ module.exports = {
                         const embed = new Discord.MessageEmbed()
                         .setTitle(`${prize}`)
                         .setColor('36393F')
-                        .setDescription(`Kliknij w reakcje 👍 i wygraj ${prize}!\n `+"`Giveaway kończy się: `")
+                        .setDescription(`Kliknij w reakcje 👍 i wygraj ${prize}!\n `+"`Giveaway kończy się: "+dww+" `")
 						.setImage(photo)
                         .setFooter(`Utworzony przez ${message.author.username}`)
                         let msg = await message.channel.send(embed)
