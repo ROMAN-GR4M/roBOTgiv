@@ -9,11 +9,8 @@ module.exports = {
             var time = '';
             var time2 = '';
             var time3 = '';
-            const embedinfo = new Discord.MessageEmbed()
-                        .setTitle(`${prefix}giveaway [czas trwania] [link do zdjęcia] [nagroda]`)
-                        .setColor('ffffff')
             if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('You don\'t have enough permissions to use this command.');
-            if (message.content === `${prefix}giveaway`) return message.channel.send(embedinfo)
+            if (message.content === `${prefix}giveaway`) return message.channel.send(`${prefix}giveaway [czas trwania] [link do zdjęcia] [nagroda]`)
             if (message.content !== `${prefix}giveaway`) {
                 const stated_duration_hours = message.content.split(' ')[1];
                 const stated_duration_hours2 = stated_duration_hours.toLowerCase();
@@ -60,7 +57,6 @@ module.exports = {
                     if (photo === '') return console.log("roBOT");
                     const prize = message.content.split(' ').slice(3).join(' ');
                     if (prize === '') return console.log("roBOT");
-                    msg.delete({ timeout: 10000 });
                     if (stated_duration_hours3 !== '0') {
                         const embed = new Discord.MessageEmbed()
                         .setTitle(`${prize}`)
@@ -70,7 +66,10 @@ module.exports = {
                         .setFooter(`Utworzony przez ${message.author.username}`)
                         let msg = await message.channel.send(embed)
                         await msg.react('👍')
-
+                        if (message.content.startsWith(`${prefix}giveaway`)) {
+                            message.delete(1000);
+                            message.channel.send(message.content.slice(5, message.content.length));
+                         }
                         setTimeout(() => {
                             msg.reactions.cache.get('👍').users.remove(client.user.id)
                             setTimeout(() => {
