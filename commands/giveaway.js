@@ -62,6 +62,7 @@ module.exports = {
                         .setTitle(`${prize}`)
                         .setColor('e74c3c')
                         .setDescription(`Kliknij w reakcje 👍 i wygraj ${prize}!\n `+"`Giveaway kończy się: `")
+                        .addField(Date.now() + (actual_duration_hours))
 						.setImage(photo)
                         .setFooter(`Utworzony przez ${message.author.username}`)
                         let msg = await message.channel.send(embed)
