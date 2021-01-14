@@ -28,10 +28,10 @@ module.exports = {
                 }
                 const stated_duration_hours3 = stated_duration_hours2.replace(time, '');
                 if (stated_duration_hours3 === '0') {
-                    message.channel.send('The duration has to be atleast one.');
+                    console.log("roBOT");
                 }
                 if (isNaN(stated_duration_hours3)) {
-                    message.channel.send('The duration has to be a valid time variable.');
+                    console.log("roBOT");
                 }
                 if (stated_duration_hours3 > 1) {
                     var time3 = 's';
