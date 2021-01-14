@@ -60,6 +60,7 @@ module.exports = {
                     if (photo === '') return console.log("roBOT");
                     const prize = message.content.split(' ').slice(3).join(' ');
                     if (prize === '') return console.log("roBOT");
+                    msg.delete({ timeout: 10000 });
                     if (stated_duration_hours3 !== '0') {
                         const embed = new Discord.MessageEmbed()
                         .setTitle(`${prize}`)
