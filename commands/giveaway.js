@@ -66,6 +66,7 @@ module.exports = {
                         .setFooter(`Utworzony przez ${message.author.username}`)
                         let msg = await message.channel.send(embed)
                         await msg.react('👍')
+
                         setTimeout(() => {
                             msg.reactions.cache.get('👍').users.remove(client.user.id)
                             setTimeout(() => {
