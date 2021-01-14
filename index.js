@@ -3,10 +3,25 @@ const client = new Discord.Client();
 let fs = require('fs');
 const { prefix, token } = require('./config.json');
 
+const activity = [
+  "Pamiętaj, by świętować godzinę papieską!",
+  "Jestem twoim Bogiem, rozumiesz?",
+  "GrochuPay to legitna forma płatności",
+  "Jestem zajebisty",
+]
+
 client.on('ready', () => {
   console.log(`Bot tag: ${client.user.tag}`);
   console.log(`Guilds: ${client.guilds.cache.size}`);
-  client.user.setActivity(`GrochuPay`, { type: 'STREAMING', url: "https://twitch.tv/roman2137" });
+
+  let i = 0;
+  setInterval(() => {
+    const index = Math.floor(i)
+    client.user.setActivity(activity[index], { type: 'PLAYING'});
+    i = i + 1;
+    if(i === activity.length) i = i - activity.length;
+  }, 10000);
+  
 });
 
 client.commands = new Discord.Collection();
