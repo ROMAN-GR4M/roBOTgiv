@@ -54,9 +54,9 @@ module.exports = {
                 }
                 if (!isNaN(stated_duration_hours3)) {
                     const photo = message.content.split(' ')[2];
-                    if (photo === '') return message.channel.send('Błąd komendy');
+                    if (photo === '') return console.log("roBOT");
                     const prize = message.content.split(' ').slice(3).join(' ');
-                    if (prize === '') return message.channel.send('Błąd komendy');
+                    if (prize === '') return console.log("roBOT");
                     if (stated_duration_hours3 !== '0') {
                         const embed = new Discord.MessageEmbed()
                         .setTitle(`${prize}`)
