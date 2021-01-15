@@ -3,20 +3,6 @@ const client = new Discord.Client();
 let fs = require('fs');
 const { prefix, token } = require('./config.json');
 
-const manager = new GiveawaysManager(client, {
-  storage: './giveaways.json',
-  updateCountdownEvery: 10000,
-  hasGuildMembersIntent: false,
-  default: {
-      botsCanWin: false,
-      exemptPermissions: ['MANAGE_MESSAGES', 'ADMINISTRATOR'],
-      embedColor: '#FF0000',
-      reaction: '🎉'
-  }
-});
-
-client.giveawaysManager = manager;
-
 const activity = [
   "Pamiętaj, by świętować godzinę papieską!",
   "Jestem twoim Bogiem, rozumiesz?",
