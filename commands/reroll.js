@@ -2,9 +2,9 @@ let Discord = require('discord.js');
 const { prefix } = require('../config.json');
 
 module.exports = {
-    name: 'giveaway',
+    name: 'reroll',
     execute(client, message){
-        
+
         setTimeout(() => {
             let winner = msg.reactions.cache.get('👍').users.cache.random();
             if (msg.reactions.cache.get('👍').users.cache.size < 1) {
