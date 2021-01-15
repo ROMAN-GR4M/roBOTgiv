@@ -55,8 +55,7 @@ module.exports = {
                 if (!isNaN(stated_duration_hours3)) {
                     const photo = message.content.split(' ')[2];
                     if (photo === '') return console.log("roBOT");
-                    const wine = message.content.split(' ')[3];
-                    const prize = message.content.split(' ').slice(4).join(' ');
+                    const prize = message.content.split(' ').slice(3).join(' ');
                     if (prize === '') return console.log("roBOT");
                     if (stated_duration_hours3 !== '0') {
                         const embed = new Discord.MessageEmbed()
@@ -70,7 +69,6 @@ module.exports = {
 
                         setTimeout(() => {
                             msg.reactions.cache.get('👍').users.remove(client.user.id)
-                            for(let p = 1 ; p < wine ; p++){
                             setTimeout(() => {
                                 let winner = msg.reactions.cache.get('👍').users.cache.random();
                                 if (msg.reactions.cache.get('👍').users.cache.size < 1) {
@@ -89,7 +87,6 @@ module.exports = {
                                     message.channel.send(winner_embed);
                                     message.channel.send(`Prosimy ${winner} o odebranie nagrody od ${message.author}`)
                                 }
-                            }
                             }, 1000);
                         }, actual_duration_hours);
                     }
