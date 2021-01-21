@@ -14,6 +14,7 @@ module.exports = {
     name: 'ban',
     description: 'siema',
         execute(client, message) {
+            if(message.content === `${prefix}ban`) {
             const { member, mentions } = message
 
             let toBan = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username.toLowerCase() === args.slice(0).join(" ") || x.user.username === args[0]);
@@ -27,5 +28,6 @@ module.exports = {
                 reason: reason
             })
             message.channel.send(embed1)
+        }
         }
     }
