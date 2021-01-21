@@ -10,7 +10,7 @@ function Random() {
 function generateHex() {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
-const email = client.user.email;
+
 module.exports = {
     name: 'test-iq',
     description: 'siema',
@@ -19,7 +19,7 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
             .setColor(generateHex())
             .setTitle('TEST IQ')
-            .setDescription(`${email} posiada **`+Random()+` IQ**`)
+            .setDescription(`${message.author} posiada **`+Random()+` IQ**`)
             .setFooter('Bot ma zawsze rację')
             .setThumbnail(message.author.avatarURL())
             .setTimestamp();
