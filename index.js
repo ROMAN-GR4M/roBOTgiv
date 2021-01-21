@@ -6,7 +6,7 @@ const { prefix, token } = require('./config.json');
 const activity = [
   "Pamiętaj, by świętować godzinę papieską!",
   "Jestem twoim Bogiem, rozumiesz?",
-  "GrochuPay to legitna forma płatności",
+  "#Hot16Świrek",
   "Jestem zajebisty",
   "Grochu Raider"
 ]
