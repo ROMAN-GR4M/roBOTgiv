@@ -8,7 +8,14 @@ const activity = [
   "Jestem twoim Bogiem, rozumiesz?",
   "GrochuPay to legitna forma płatności",
   "Jestem zajebisty",
-  "Grochu Raider",
+  "Grochu Raider"
+]
+
+const activ = [
+  "STREAMING",
+  "WATCHING",
+  "LISTENING",
+  "PLAYING"
 ]
 
 client.on('ready', () => {
@@ -18,10 +25,10 @@ client.on('ready', () => {
   let i = 0;
   setInterval(() => {
     const index = Math.floor(i)
-    client.user.setActivity(activity[index], { type: 'PLAYING'});
+    client.user.setActivity(activity[index], { type: activ[index]});
     i = i + 1;
     if(i === activity.length) i = i - activity.length;
-  }, 5000);
+  }, 7500);
   
 });
 
