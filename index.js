@@ -7,7 +7,6 @@ const activity = [
   "Pamiętaj, by świętować godzinę papieską!",
   "Jestem twoim Bogiem, rozumiesz?",
   "#Hot16Świrek",
-  "Jestem zajebisty",
   "Grochu Raider"
 ]
 
