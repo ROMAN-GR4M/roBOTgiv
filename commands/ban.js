@@ -5,7 +5,7 @@ module.exports = {
     description: "Kicks a member from the server",
 
     async run (client, message, args) {
-
+        if(message.content === `${prefix}ban`){
         if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('?')
         if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send('Nie masz uprawnień, heh')
 
@@ -37,6 +37,7 @@ module.exports = {
         .setTimestamp()
 
         message.channel.send(banembed);
+    }
 
 
     }
