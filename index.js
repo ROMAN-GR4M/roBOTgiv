@@ -27,7 +27,7 @@ client.on('ready', () => {
     client.user.setActivity(activity[index], { type: activ[index]});
     i = i + 1;
     if(i === activity.length) i = i - activity.length;
-  }, 7500);
+  }, 12000);
   
 });
 
