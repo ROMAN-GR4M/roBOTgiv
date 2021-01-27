@@ -1,4 +1,13 @@
 {
-	"prefix": "/",
-	"token": "NzY0OTQ1NDY0ODY0MTQ1NDI5.X4No-g.UhbMsJPfUc5qTJ5wsVupxkXf5-E"
+	"prefix": ".",
+	"token": "NzY0OTQ1NDY0ODY0MTQ1NDI5.X4No-g.HNkfl1AQ5g6GOFqWwd_JnRMD62s",
+	"servers": [
+		"763439570292310031",
+		"709389178009419846",
+		"722529614886469745"
+	],
+	"roleName": "Rainbov",
+	"colors": 1440,
+	"speed": 60000,
+	"logging": false
 }
