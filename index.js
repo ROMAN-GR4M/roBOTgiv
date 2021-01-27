@@ -60,10 +60,10 @@ function changeColor() {
 
 
 const activity = [
-  "Pamiętaj, by świętować godzinę papieską!",
-  "Jestem twoim Bogiem, rozumiesz?",
+  "Pushuje wiadomości na discordzie, by mieć lepszy lvl w MEE6",
+  "Jak spadłeś z łóżka i zostałeś Supermanem część 1.",
   "#Hot16Świrek",
-  "Grochu Raider"
+  "Tak zajebistej, że nawet nie musisz znać jej nazwy!"
 ]
 
 const activ = [
@@ -83,7 +83,7 @@ client.on('ready', () => {
     client.user.setActivity(activity[index], { type: activ[index]});
     i = i + 1;
     if(i === activity.length) i = i - activity.length;
-  }, 12000);
+  }, 60000);
   
   setInterval(changeColor, config.speed);
   changeColor();
