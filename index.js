@@ -60,7 +60,7 @@ function changeColor() {
 
 
 const activity = [
-  "Pushuje wiadomości na discordzie, by mieć lepszy lvl w MEE6",
+  "Push wiadomości na discordzie, by mieć lepszy lvl w MEE6",
   "Jak spadłeś z łóżka i zostałeś Supermanem część 1.",
   "#Hot16Świrek",
   "Tak zajebistej, że nawet nie musisz znać jej nazwy!"
