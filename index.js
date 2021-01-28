@@ -67,7 +67,7 @@ const activity = [
 ]
 
 const activ = [
-  "STREAMING",
+  "PLAYING",
   "WATCHING",
   "LISTENING",
   "PLAYING"

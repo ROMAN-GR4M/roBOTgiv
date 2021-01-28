@@ -7,7 +7,7 @@
 		"722529614886469745"
 	],
 	"roleName": "Rainbov",
-	"colors": 500,
-	"speed": 90000,
-	"logging": true
+	"colors": 360,
+	"speed": 60000,
+	"logging": false
 }
