@@ -60,10 +60,18 @@ function changeColor() {
 
 
 const activity = [
-  "Zmieniam kolor roli",
-  "nie mam komend"
+  "Push wiadomości na discordzie, by mieć lepszy lvl w MEE6",
+  "Jak spadłeś z łóżka i zostałeś Supermanem część 1.",
+  "#Hot16Świrek",
+  "Tak zajebistej, że nawet nie musisz znać jej nazwy!"
 ]
 
+const activ = [
+  "PLAYING",
+  "WATCHING",
+  "LISTENING",
+  "PLAYING"
+]
 
 client.on('ready', () => {
   console.log(`Bot tag: ${client.user.tag}`);
@@ -72,7 +80,7 @@ client.on('ready', () => {
   let i = 0;
   setInterval(() => {
     const index = Math.floor(i)
-    client.user.setActivity(activity[index], { type: PLAYING});
+    client.user.setActivity(activity[index], { type: activ[index]});
     i = i + 1;
     if(i === activity.length) i = i - activity.length;
   }, 60000);
