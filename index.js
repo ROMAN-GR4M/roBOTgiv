@@ -99,6 +99,9 @@ for(const file of commandFiles) {
 }
 
 client.on('message', async message => {
+	if(message.content === "/help") {
+		message.channel.send(`Komenda jest jedna\n${prefix}test-iq`)
+	}
   if (message.content.startsWith(`${prefix}`)) {
     let file_name = `${message.content.split(' ')[0].replace(prefix, '')}.js`;
     if(!fs.existsSync('./commands/' + file_name)) return undefined;
